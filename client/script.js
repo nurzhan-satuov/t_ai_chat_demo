@@ -107,7 +107,7 @@ const handleSubmit = async (e) => {
     } else {
         const err = await response.text()
 
-        messageDiv.innerHTML = "Something went wrong"
+        messageDiv.innerHTML = "Something went wrong. Our customer support professional will contact you as soon as possible."
         alert(err)
     }
 }
