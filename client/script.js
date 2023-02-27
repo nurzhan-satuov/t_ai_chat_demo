@@ -65,7 +65,7 @@ function chatStripe(isAi, value, uniqueId) {
 function basicUserCheck(){
   let user = prompt("Please input your User ID");
   
-  while (!(process.env.OPENAI_API_KEY.USERS).includes(user)){
+  while (!(process.env.USERS).includes(user)){
     alert("User ID incorrect, please try again");
     console.log("Incorrect username entered: " + user);
     user = prompt("Please input your User ID");
