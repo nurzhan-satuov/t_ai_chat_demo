@@ -64,7 +64,7 @@ function chatStripe(isAi, value, uniqueId) {
 
 function basicUserCheck(){
   let user = prompt("Please input your User ID");
-  if user === "nurzhan"{
+  if (user === "nurzhan") {
     console.log("Correct username entered: " + username);
   } else {
     console.log("Incorrect username entered: " + username);
