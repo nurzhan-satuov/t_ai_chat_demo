@@ -41,7 +41,7 @@ app.post('/', async (req, res) => {
 
   } catch (error) {
     console.error(error)
-    res.status(500).send(error || 'Something went wrong');
+    res.status(500).send(error || 'Something went wrong. Our support team will connect to you as soon as possible.');
   }
 })
 
