@@ -64,13 +64,13 @@ function chatStripe(isAi, value, uniqueId) {
 
 function basicUserCheck(){
   let user = prompt("Please input your User ID");
-  if (user === "nurzhan") {
-    console.log("Correct username entered: " + username);
-  } else {
-    console.log("Incorrect username entered: " + username);
+  
+  while (user !== "nurzhan"){
     alert("User ID incorrect, please try again");
-    window.location = "https://t-ai-chat-demo.vercel.app/";
+    console.log("Incorrect username entered: " + user);
+    user = prompt("Please input your User ID");
   }
+  console.log("Correct username entered: " + user);
 
 }
 
@@ -124,6 +124,7 @@ const handleSubmit = async (e) => {
     }
 }
 
+basicUserCheck();
 
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
