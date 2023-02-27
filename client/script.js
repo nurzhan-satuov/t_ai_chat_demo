@@ -3,6 +3,7 @@ import user from './assets/user.svg'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
+const messageHistory = "Imagine a conversation between a human and a clever customer support AI chatbot.\n"
 
 let loadInterval
 
@@ -81,7 +82,10 @@ const handleSubmit = async (e) => {
 
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
-
+    messageHistory += "Human: " + data.get('prompt') + "\n"
+    console.log(messageHistory)
+    console.log(".........\n messageHistory updated with human input.\n.........")
+  
     // to clear the textarea input 
     form.reset()
 
@@ -116,10 +120,14 @@ const handleSubmit = async (e) => {
         const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
         typeText(messageDiv, parsedData)
+        messageHistory += "AI: " +  parsedData
+        console.log(messageHistory)
+        console.log(".........\n messageHistory updated with AI answer.\n.........")
     } else {
         const err = await response.text()
 
         messageDiv.innerHTML = "Something went wrong. Our customer support professional will contact you as soon as possible."
+        console.log("Error")
         alert(err)
     }
 }
