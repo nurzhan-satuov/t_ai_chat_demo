@@ -124,7 +124,6 @@ const handleSubmit = async (e) => {
     }
 }
 
-basicUserCheck();
 
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
