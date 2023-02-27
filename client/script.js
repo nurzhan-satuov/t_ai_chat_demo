@@ -3,7 +3,7 @@ import user from './assets/user.svg'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
-const messageHistory = "Imagine a conversation between a human and a clever customer support AI chatbot.\n"
+var messageHistory = "Imagine a conversation between a human and a clever customer support AI chatbot.\n"
 
 let loadInterval
 
