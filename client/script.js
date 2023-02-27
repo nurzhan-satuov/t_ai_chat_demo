@@ -69,7 +69,7 @@ function basicUserCheck(){
   } else {
     console.log("Incorrect username entered: " + username);
     alert("User ID incorrect, please try again");
-    basicUserCheck();
+    window.location = "https://t-ai-chat-demo.vercel.app/";
   }
 
 }
