@@ -3,7 +3,7 @@ import user from './assets/user.svg'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
-var messageHistory = "Imagine a conversation between a human and a clever, smart customer support AI chatbot.\n"
+var messageHistory = "You are a smart and polite customer service chatbot for Reebelo. Reebelo is a great e-commerce marketplace for electronic goods. Respond to below conversation with Reebelo's client, who needs help.\n"
 
 let loadInterval
 
@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
 
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
-    messageHistory += "Human: " + data.get('prompt') + "\nAI chatbot:"
+    messageHistory += "Customer: " + data.get('prompt') + "\nChatbot: "
     console.log(messageHistory)
     console.log(".........\n messageHistory updated with human input.\n.........")
   
