@@ -3,7 +3,7 @@ import user from './assets/user.svg'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
-var messageHistory = "You are a smart and polite customer service chatbot for Reebelo. Reebelo is a great e-commerce marketplace for electronic goods. Respond to below conversation with Reebelo's client, who needs help.\n"
+var messageHistory = "You are a smart and polite customer service chatbot for Reebelo. Reebelo is an e-commerce marketplace for electronic goods. Respond to below conversation with Reebelo's client, who needs help. Try respond on point and try to not provide responses out of scope. If question is not relevant, ask customer to contact support team at support@reebelo.sg. \n"
 
 let loadInterval
 
@@ -66,7 +66,7 @@ function chatStripe(isAi, value, uniqueId) {
 function basicUserCheck(){
   let user = prompt("Please input your User ID");
   
-  while (!("nurzhanarusayanabay").includes(user) && user.length < 3){
+  while (!("nurzhanarusayanabay").includes(user) || user.length < 3){
     alert("User ID incorrect, please try again");
     console.log("Incorrect username entered: " + user);
     user = prompt("Please input your User ID");
